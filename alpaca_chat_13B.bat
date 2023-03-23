@@ -1,0 +1,1 @@
+main --threads 6 --model "models/alpaca30b/ggml-model-q4_0_v2.bin" -c 2048 --color -ins --n_predict 2048 --n_parts 1

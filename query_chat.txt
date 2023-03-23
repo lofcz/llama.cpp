@@ -1,0 +1,1 @@
+chat --threads 8 --model models/alpaca7B/ggml-alpaca-7b-q4.bin

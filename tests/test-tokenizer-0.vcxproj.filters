@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\lordo\llama.cpp\tests\test-tokenizer-0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lordo\llama.cpp\tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="C:\Users\lordo\llama.cpp\llama.dir\$(Configuration)\llama.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\lordo\llama.cpp\ggml.dir\$(Configuration)\ggml.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="C:\Users\lordo\llama.cpp\utils.dir\$(Configuration)\utils.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{5BC1D3CD-B6C0-326B-B5BF-6ADB801C85FE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0276DCC1-4238-35FF-A3CF-EE2E00224733}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

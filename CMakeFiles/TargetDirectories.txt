@@ -1,0 +1,10 @@
+C:/Users/lordo/llama.cpp/CMakeFiles/utils.dir
+C:/Users/lordo/llama.cpp/CMakeFiles/ggml.dir
+C:/Users/lordo/llama.cpp/CMakeFiles/llama.dir
+C:/Users/lordo/llama.cpp/CMakeFiles/main.dir
+C:/Users/lordo/llama.cpp/CMakeFiles/quantize.dir
+C:/Users/lordo/llama.cpp/CMakeFiles/RUN_TESTS.dir
+C:/Users/lordo/llama.cpp/CMakeFiles/ALL_BUILD.dir
+C:/Users/lordo/llama.cpp/CMakeFiles/ZERO_CHECK.dir
+C:/Users/lordo/llama.cpp/tests/CMakeFiles/test-tokenizer-0.dir
+C:/Users/lordo/llama.cpp/tests/CMakeFiles/RUN_TESTS.dir

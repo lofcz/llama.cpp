@@ -1,0 +1,1 @@
+C:\Users\lordo\llama.cpp\ggml.dir\Release\ggml.lib

@@ -1,0 +1,1 @@
+llama --threads 8 --model models/7B/ggml-model-q4_0.bin --n_predict 1000 -p ""

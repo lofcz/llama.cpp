@@ -1,0 +1,10 @@
+^C:\USERS\LORDO\LLAMA.CPP\CMAKELISTS.TXT
+setlocal
+C:\Python311\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/lordo/llama.cpp -BC:/Users/lordo/llama.cpp --check-stamp-file C:/Users/lordo/llama.cpp/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
