@@ -414,36 +414,32 @@ class ServerRequestHandler(http.server.SimpleHTTPRequestHandler):
                 messages_array = genparams.get('messages', [])
                 adapter_obj = genparams.get('adapter', {})
                 messages_string = ""
-                templates = adapter_obj.get("templates", {})
-                templates_system = templates.get("system", {})
-                templates_user = templates.get("user", {})
-                templates_assistant = templates.get("assistant", {})
-                system_message_start = templates_system.get("start") or "\n### Instruction:\n"
-                system_message_end = templates_system.get("end") or ""
-                user_message_start = templates_user.get("start") or "\n### Instruction:\n"
-                user_message_end = templates_user.get("end") or ""
-                assistant_message_start = templates_assistant.get("start") or "\n### Response:\n"
-                assistant_message_end = templates_assistant.get("end") or ""
-                after_last_message = templates.get("after_last_message") or ""        
+                system_message_start = adapter_obj.get("system_start", "\n### Instruction:\n")
+                system_message_end = adapter_obj.get("system_end", "")
+                user_message_start = adapter_obj.get("user_start", "\n### Instruction:\n")
+                user_message_end = adapter_obj.get("user_end", "")
+                assistant_message_start = adapter_obj.get("assistant_start", "\n### Response:\n")
+                assistant_message_end = adapter_obj.get("assistant_end", "")
 
                 for message in messages_array:
                     if message['role'] == "system":
-                        messages_string+=system_message_start
+                        messages_string += system_message_start
                     elif message['role'] == "user":
-                        messages_string+=user_message_start
+                        messages_string += user_message_start
                     elif message['role'] == "assistant":
-                        messages_string+=assistant_message_start
-                    messages_string+=message['content']
-                    if message['role'] == "system":
-                        messages_string+=system_message_end
-                    elif message['role'] == "user":
-                        messages_string+=user_message_end
-                    elif message['role'] == "assistant":
-                        messages_string+=assistant_message_end
+                        messages_string += assistant_message_start
 
-                messages_string += after_last_message
-                messages_string = messages_string.rstrip()
-                
+                    messages_string += message['content']
+
+                    if message['role'] == "system":
+                        messages_string += system_message_end
+                    elif message['role'] == "user":
+                        messages_string += user_message_end
+                    elif message['role'] == "assistant":
+                        messages_string += assistant_message_end
+
+                messages_string += assistant_message_start
+
                 genparams["prompt"] = messages_string
                 frqp = genparams.get('frequency_penalty', 0.1)
                 scaled_rep_pen = genparams.get('presence_penalty', frqp) + 1
